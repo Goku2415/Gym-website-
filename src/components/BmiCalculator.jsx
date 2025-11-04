@@ -6,7 +6,6 @@ const BmiCalculator = () => {
   const [height,setHeight]= useState("");
   const [weight,setWeight]= useState("");
   const [gender, setGender]= useState("");
-  const [bmi, setBmi]= useState("");
 
 
   const CalculatorBMI =(e)=>{
@@ -17,7 +16,7 @@ const BmiCalculator = () => {
     }
     const heightInMeters = height/100;
     const bmiValue = (weight/(heightInMeters*heightInMeters)).toFixed(2);
-    setBmi(bmiValue);
+    // setBmi(bmiValue); // Removed unused variable
 
 
     if(bmiValue<18.5){
